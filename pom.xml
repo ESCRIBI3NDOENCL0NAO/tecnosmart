@@ -17,7 +17,9 @@
     <module>usuarios-service</module>
     <module>despacho-service</module>
     <module>pagos-service</module>
-
+    <module>envios-service</module>
+    <module>favoritos-service</module>
+    <module>notificaciones-service</module>
 </modules>
 
     <properties>

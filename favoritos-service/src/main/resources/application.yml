@@ -1,0 +1,18 @@
+server:
+  port: 8089
+
+spring:
+  application:
+    name: favoritos-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/ecommerce_favoritos_db
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

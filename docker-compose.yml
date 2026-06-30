@@ -103,6 +103,42 @@ services:
     networks:
       - tecnosmart-network
 
+  envios-service:
+    build: ./envios-service
+    container_name: envios-service
+    ports:
+      - "8088:8088"
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - tecnosmart-network
+
+  favoritos-service:
+    build: ./favoritos-service
+    container_name: favoritos-service
+    ports:
+      - "8089:8089"
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - tecnosmart-network
+
+  notificaciones-service:
+    build: ./notificaciones-service
+    container_name: notificaciones-service
+    ports:
+      - "8090:8090"
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - tecnosmart-network
+
 networks:
   tecnosmart-network:
     driver: bridge
