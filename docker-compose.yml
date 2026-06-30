@@ -1,0 +1,108 @@
+services:
+  eureka-server:
+    build: ./eureka-server
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - tecnosmart-network
+
+  api-gateway:
+    build: ./api-gateway
+    container_name: api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - tecnosmart-network
+
+  usuario-service:
+    build: ./usuarios-service
+    container_name: usuarios-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - tecnosmart-network
+
+  catalogo-service:
+    build: ./catalogo-service
+    container_name: catalogo-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - tecnosmart-network
+
+  inventario-service:
+    build: ./inventario-service
+    container_name: inventario-service
+    ports:
+      - "8083:8083"
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - tecnosmart-network
+
+  carrito-service:
+    build: ./carrito-service
+    container_name: carrito-service
+    ports:
+      - "8084:8084"
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - tecnosmart-network
+
+  pedidos-service:
+    build: ./pedidos-service
+    container_name: pedidos-service
+    ports:
+      - "8085:8085"
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - tecnosmart-network
+
+  pagos-service:
+    build: ./pagos-service
+    container_name: pagos-service
+    ports:
+      - "8086:8086"
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - tecnosmart-network
+
+  despacho-service:
+    build: ./despacho-service
+    container_name: despacho-service
+    ports:
+      - "8087:8087"
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - tecnosmart-network
+
+networks:
+  tecnosmart-network:
+    driver: bridge
