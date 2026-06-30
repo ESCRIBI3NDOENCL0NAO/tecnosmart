@@ -5,12 +5,15 @@ spring:
   application:
     name: envios-service
   datasource:
-    url: jdbc:mysql://localhost:3306/ecommerce_envios_db
+    url: jdbc:h2:mem:enviosdb
+    driverClassName: org.h2.Driver
     username: root
     password:
   jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update
+    show-sql: true
 
 eureka:
   client:
