@@ -1,6 +1,6 @@
 package duoc.inventario.repository;
 
-import duoc.inventario.model.entity.Inventario;
+import duoc.inventario.model.Inventario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 

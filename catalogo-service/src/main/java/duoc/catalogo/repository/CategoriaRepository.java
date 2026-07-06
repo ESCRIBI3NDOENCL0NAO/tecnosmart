@@ -1,6 +1,6 @@
 package duoc.catalogo.repository;
 
-import duoc.catalogo.model.entity.Categoria;
+import duoc.catalogo.model.Categoria;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

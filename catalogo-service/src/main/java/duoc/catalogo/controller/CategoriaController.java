@@ -1,7 +1,7 @@
 package duoc.catalogo.controller;
 
-import duoc.catalogo.model.dto.CategoriaRequestDTO;
-import duoc.catalogo.model.entity.Categoria;
+import duoc.catalogo.dto.CategoriaRequestDTO;
+import duoc.catalogo.model.Categoria;
 import duoc.catalogo.service.CategoriaService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

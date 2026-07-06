@@ -1,4 +1,4 @@
-package duoc.pedidos.model.dto;
+package duoc.pedidos.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;

@@ -1,6 +1,6 @@
 package duoc.usuarios.repository;
 
-import duoc.usuarios.model.entity.Usuario;
+import duoc.usuarios.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

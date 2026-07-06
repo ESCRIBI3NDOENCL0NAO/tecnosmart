@@ -1,4 +1,4 @@
-package duoc.pedidos.model.entity;
+package duoc.pedidos.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -22,9 +22,7 @@ public class Pedido {
     private List<PedidoItem> items;
 
     private String estado;
-
-    /*
-    Explicación: pedido guarda los datos generales y con OneToMany, se puede ver
-    todos los pedidos asociados
-     */
 }
+
+/* Explicación: pedido guarda los datos generales y con OneToMany, se puede ver
+todos los pedidos asociados */

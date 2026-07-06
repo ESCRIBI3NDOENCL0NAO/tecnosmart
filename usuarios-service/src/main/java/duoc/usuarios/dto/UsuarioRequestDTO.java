@@ -1,4 +1,4 @@
-package duoc.usuarios.model.dto;
+package duoc.usuarios.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

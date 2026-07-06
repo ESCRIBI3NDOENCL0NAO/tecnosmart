@@ -1,4 +1,4 @@
-package duoc.catalogo.model.entity;
+package duoc.catalogo.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -16,10 +16,9 @@ public class Categoria {
 
     @Column(nullable = false, unique = true)
     private String descripcion;
-
-    /*
-    Explicación: este código cataloga y permite que no haya productos sueltos, sino que todos
-    pertenezcan a una categoria, y además permite crear nuevas categorías sin
-    afectar a los productos.
-     */
 }
+/*
+Explicación: este código cataloga y permite que no haya productos sueltos, sino que todos
+pertenezcan a una categoria, y además permite crear nuevas categorías sin
+afectar a los productos.
+ */

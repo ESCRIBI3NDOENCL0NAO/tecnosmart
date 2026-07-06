@@ -1,16 +1,17 @@
 package duoc.catalogo.service;
 
-import duoc.catalogo.model.entity.Categoria;
+import duoc.catalogo.dto.ProductoRequestDTO;
+import duoc.catalogo.model.Categoria;
+import duoc.catalogo.model.Producto;
 import duoc.catalogo.repository.CategoriaRepository;
+import duoc.catalogo.repository.ProductoRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import duoc.catalogo.model.dto.ProductoRequestDTO;
-import duoc.catalogo.model.entity.Producto;
-import duoc.catalogo.repository.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 public class ProductoService {
@@ -24,8 +25,6 @@ public class ProductoService {
 
     public Producto guardarProducto(ProductoRequestDTO dto) {
         log.info("Creando nuevo producto: {}", dto.getNombre());
-
-        // Validamos que la categoría enviada realmente exista en la base de datos
         Categoria cat = validarCategoria(dto.getCategoriaId());
 
         Producto p = new Producto();
@@ -45,12 +44,11 @@ public class ProductoService {
     public Producto buscarProductoPorId(Long id) {
         log.info("Buscando producto con ID: {}", id);
         return productoRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Producto no encontrado con ID: " + id));
+                .orElseThrow(() -> new NoSuchElementException("Producto no encontrado con ID: " + id));
     }
 
     public Producto actualizarProducto(Long id, ProductoRequestDTO dto) {
         log.info("Actualizando producto ID: {}", id);
-
         Producto p = buscarProductoPorId(id);
         Categoria cat = validarCategoria(dto.getCategoriaId());
 
@@ -68,12 +66,11 @@ public class ProductoService {
         productoRepository.delete(p);
     }
 
-    // metodo de validación para las categorías
     private Categoria validarCategoria(Long categoriaId) {
         return categoriaRepository.findById(categoriaId)
                 .orElseThrow(() -> {
                     log.error("Error: La categoría con ID {} no existe", categoriaId);
-                    return new RuntimeException("Categoría no encontrada");
+                    return new NoSuchElementException("Categoría no encontrada con ID: " + categoriaId);
                 });
     }
 }

@@ -1,4 +1,4 @@
-package duoc.usuarios.model.entity;
+package duoc.usuarios.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

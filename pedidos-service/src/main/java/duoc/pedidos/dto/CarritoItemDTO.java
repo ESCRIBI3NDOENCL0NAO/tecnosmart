@@ -1,4 +1,4 @@
-package duoc.pedidos.model.dto;
+package duoc.pedidos.dto;
 
 import lombok.Data;
 

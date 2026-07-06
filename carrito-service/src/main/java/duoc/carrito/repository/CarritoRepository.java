@@ -1,6 +1,6 @@
 package duoc.carrito.repository;
 
-import duoc.carrito.model.entity.CarritoItem;
+import duoc.carrito.model.CarritoItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 import java.util.Optional;

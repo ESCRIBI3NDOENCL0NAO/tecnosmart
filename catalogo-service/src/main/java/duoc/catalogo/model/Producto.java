@@ -1,4 +1,4 @@
-package duoc.catalogo.model.entity;
+package duoc.catalogo.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -20,9 +20,8 @@ public class Producto {
     @ManyToOne
     @JoinColumn(name = "categoria_id", nullable = false)
     private Categoria categoria;
-
-    /*
-    Explicación: es la entidad principal, y está atada a las categorías, por lo que
-    no puede existir sin ellas
-     */
 }
+/*
+Explicación: es la entidad principal, y está atada a las categorías, por lo que
+no puede existir sin ellas
+ */

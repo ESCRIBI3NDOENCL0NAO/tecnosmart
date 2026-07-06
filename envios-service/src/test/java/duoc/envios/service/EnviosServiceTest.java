@@ -1,6 +1,6 @@
 package duoc.envios.service;
 
-import duoc.envios.model.ModelEnvio; // Asegúrate que el nombre del modelo sea correcto
+import duoc.envios.model.ModelEnvio;
 import duoc.envios.repository.RepositoryEnvio;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

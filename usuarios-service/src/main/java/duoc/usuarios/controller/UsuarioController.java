@@ -2,8 +2,8 @@ package duoc.usuarios.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import duoc.usuarios.model.entity.Usuario;
-import duoc.usuarios.model.dto.UsuarioRequestDTO;
+import duoc.usuarios.model.Usuario;
+import duoc.usuarios.dto.UsuarioRequestDTO;
 import duoc.usuarios.service.UsuarioService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

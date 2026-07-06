@@ -1,4 +1,4 @@
-package duoc.despacho.entity;
+package duoc.despacho.model;
 
 import jakarta.persistence.*;
 import lombok.*;

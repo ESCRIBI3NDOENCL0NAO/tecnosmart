@@ -1,6 +1,6 @@
 package duoc.pedidos.client;
 
-import duoc.pedidos.model.dto.CarritoItemDTO;
+import duoc.pedidos.dto.CarritoItemDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

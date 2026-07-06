@@ -1,4 +1,4 @@
-package duoc.catalogo.model.dto;
+package duoc.catalogo.dto;
 
 
 import jakarta.validation.constraints.NotBlank;

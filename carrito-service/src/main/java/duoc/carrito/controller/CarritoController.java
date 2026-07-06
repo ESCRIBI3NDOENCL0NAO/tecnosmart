@@ -1,7 +1,7 @@
 package duoc.carrito.controller;
 
-import duoc.carrito.model.dto.CarritoRequestDTO;
-import duoc.carrito.model.entity.CarritoItem;
+import duoc.carrito.dto.CarritoRequestDTO;
+import duoc.carrito.model.CarritoItem;
 import duoc.carrito.service.CarritoService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package duoc.carrito.model.entity;
+package duoc.carrito.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -22,8 +22,5 @@ public class CarritoItem {
 
     @Column(nullable = false)
     private Integer cantidad;
-
-    /*
-    Explicación: vincula a un usuario con un producto y cuantas unidades quiere
-     */
 }
+/* Explicación: vincula a un usuario con un producto y cuantas unidades quiere */

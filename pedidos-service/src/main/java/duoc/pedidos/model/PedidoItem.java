@@ -1,4 +1,4 @@
-package duoc.pedidos.model.entity;
+package duoc.pedidos.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
@@ -20,8 +20,5 @@ public class PedidoItem {
     @JoinColumn(name = "pedido_id")
     @JsonIgnore // Evita bucles infinitos al convertir a JSON
     private Pedido pedido;
-
-    /*
-    Explicación: pedidoItem desglosa lo que compro y a que precio en cada pedido
-     */
 }
+/* Explicación: pedidoItem desglosa lo que compro y a que precio en cada pedido */

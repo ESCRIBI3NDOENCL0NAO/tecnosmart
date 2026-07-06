@@ -1,4 +1,4 @@
-package duoc.carrito.model.dto;
+package duoc.carrito.dto;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -16,7 +16,6 @@ public class CarritoRequestDTO {
     @NotNull(message = "La cantidad es obligatoria")
     @Min(value = 1, message = "La cantidad mínima para agregar al carrito es 1")
     private Integer cantidad;
-
 }
 
-/* Explicación: valida que el usuario no ingrese 0 o cantidades negativas de un producto*/
+/* Explicación: valida que el usuario no ingrese 0 o cantidades negativas de un producto */

@@ -1,4 +1,4 @@
-package duoc.inventario.model.entity;
+package duoc.inventario.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

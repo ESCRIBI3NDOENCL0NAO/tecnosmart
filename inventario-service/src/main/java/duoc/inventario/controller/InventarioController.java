@@ -1,7 +1,7 @@
 package duoc.inventario.controller;
 
-import duoc.inventario.model.dto.InventarioRequestDTO;
-import duoc.inventario.model.entity.Inventario;
+import duoc.inventario.dto.InventarioRequestDTO;
+import duoc.inventario.model.Inventario;
 import duoc.inventario.service.InventarioService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

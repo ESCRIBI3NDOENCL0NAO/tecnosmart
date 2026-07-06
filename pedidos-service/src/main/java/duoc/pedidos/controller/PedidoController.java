@@ -1,7 +1,7 @@
 package duoc.pedidos.controller;
 
-import duoc.pedidos.model.dto.PedidoRequestDTO;
-import duoc.pedidos.model.entity.Pedido;
+import duoc.pedidos.dto.PedidoRequestDTO;
+import duoc.pedidos.model.Pedido;
 import duoc.pedidos.service.PedidoService;
 import jakarta.validation.Valid;
 import org.jspecify.annotations.NonNull;

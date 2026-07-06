@@ -1,6 +1,6 @@
 package duoc.pedidos.repository;
 
-import duoc.pedidos.model.entity.Pedido;
+import duoc.pedidos.model.Pedido;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.List;
