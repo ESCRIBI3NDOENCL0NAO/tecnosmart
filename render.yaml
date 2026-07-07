@@ -1,0 +1,67 @@
+services:
+  - type: web
+    name: api-gateway
+    env: docker
+    dockerContext: ./api-gateway
+    plan: free
+
+
+  - type: web
+    name: carrito-service
+    env: docker
+    dockerContext: ./carrito-service
+    plan: free
+
+  - type: web
+    name: catalogo-service
+    env: docker
+    dockerContext: ./catalogo-service
+    plan: free
+
+  - type: web
+    name: despacho-service
+    env: docker
+    dockerContext: ./despacho-service
+    plan: free
+
+  - type: web
+    name: envios-service
+    env: docker
+    dockerContext: ./envios-service
+    plan: free
+
+  - type: web
+    name: favoritos-service
+    env: docker
+    dockerContext: ./favoritos-service
+    plan: free
+
+  - type: web
+    name: inventario-service
+    env: docker
+    dockerContext: ./inventario-service
+    plan: free
+
+  - type: web
+    name: notificaciones-service
+    env: docker
+    dockerContext: ./notificaciones-service
+    plan: free
+
+  - type: web
+    name: pagos-service
+    env: docker
+    dockerContext: ./pagos-service
+    plan: free
+
+  - type: web
+    name: pedidos-service
+    env: docker
+    dockerContext: ./pedidos-service
+    plan: free
+
+  - type: web
+    name: usuarios-service
+    env: docker
+    dockerContext: ./usuarios-service
+    plan: free
