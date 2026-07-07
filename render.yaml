@@ -3,14 +3,14 @@ services:
   - type: web
     name: eureka-server
     env: docker
-    dockerContext: ./eureka-server
+    rootDir: ./eureka-server
     plan: free
     
   # 2. API GATEWAY 
   - type: web
     name: api-gateway
     env: docker
-    dockerContext: ./api-gateway
+    rootDir: ./api-gateway
     plan: free
     envVars:
       - key: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
@@ -20,7 +20,7 @@ services:
   - type: web
     name: carrito-service
     env: docker
-    dockerContext: ./carrito-service
+   rootDir: ./carrito-service
     plan: free
     envVars:
       - key: SPRING_DATASOURCE_URL
@@ -35,7 +35,7 @@ services:
   - type: web
     name: catalogo-service
     env: docker
-    dockerContext: ./catalogo-service
+    rootDir: ./catalogo-service
     plan: free
     envVars:
       - key: SPRING_DATASOURCE_URL
@@ -50,7 +50,7 @@ services:
   - type: web
     name: despacho-service
     env: docker
-    dockerContext: ./despacho-service
+    rootDir: ./despacho-service
     plan: free
     envVars:
       - key: SPRING_DATASOURCE_URL
@@ -65,7 +65,7 @@ services:
   - type: web
     name: envios-service
     env: docker
-    dockerContext: ./envios-service
+    rootDir: ./envios-service
     plan: free
     envVars:
       - key: SPRING_DATASOURCE_URL
@@ -80,7 +80,7 @@ services:
   - type: web
     name: favoritos-service
     env: docker
-    dockerContext: ./favoritos-service
+    rootDir: ./favoritos-service
     plan: free
     envVars:
       - key: SPRING_DATASOURCE_URL
@@ -95,7 +95,7 @@ services:
   - type: web
     name: inventario-service
     env: docker
-    dockerContext: ./inventario-service
+    rootDir: ./inventario-service
     plan: free
     envVars:
       - key: SPRING_DATASOURCE_URL
@@ -110,7 +110,7 @@ services:
   - type: web
     name: notificaciones-service
     env: docker
-    dockerContext: ./notificaciones-service
+    rootDir: ./notificaciones-service
     plan: free
     envVars:
       - key: SPRING_DATASOURCE_URL
@@ -125,7 +125,7 @@ services:
   - type: web
     name: pagos-service
     env: docker
-    dockerContext: ./pagos-service
+    rootDir: ./pagos-service
     plan: free
     envVars:
       - key: SPRING_DATASOURCE_URL
@@ -140,7 +140,7 @@ services:
   - type: web
     name: pedidos-service
     env: docker
-    dockerContext: ./pedidos-service
+    rootDir: ./pedidos-service
     plan: free
     envVars:
       - key: SPRING_DATASOURCE_URL
@@ -155,7 +155,7 @@ services:
   - type: web
     name: usuarios-service
     env: docker
-    dockerContext: ./usuarios-service
+    rootDir: ./usuarios-service
     plan: free
     envVars:
       - key: SPRING_DATASOURCE_URL
